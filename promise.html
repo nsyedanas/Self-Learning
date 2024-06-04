@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // let mypromise=new Promise(function(resolve,reject){
+        //     let a=3,b=3;
+        //     if(a==b)
+        //         resolve();
+        //     else
+        //         reject();
+        // })
+        
+        // mypromise.then(()=>console.log('Resolved'))
+        // .catch(()=>console.log('Rejected'));
+        
+        
+        //arithmetic promise
+        
+        let mypromise=new Promise(function(res,rej){
+            res(5);
+        })
+
+        mypromise.then(addition).then(subtraction).then(multiplication).then(division).then(function(data){
+            console.log(data);
+        })
+
+        function addition(val){
+        return (val+5);
+        }
+
+        function subtraction(val){
+            return (val-3);
+        }
+
+        function multiplication(val){
+            return (val*5);
+        }
+
+        function division(val){
+            return (val/7);
+        }
+        
+    </script>
+</body>
+</html>

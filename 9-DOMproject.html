@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM projects</title> 
+        
+    </head>    
+    <body>
+       <p>Youtube Subscirbe button</p>
+       <button class="js-subscribe" 
+       onclick="subscription(); ">subscribe</button>
+       <p></p>
+       <p>Amazon shipping calculation</p>
+        
+       
+       
+       <input class="data" onkeydown="enterProcess(event);">         
+       <button onclick="calculateTotal();"                         
+       >calculate</button>
+       <p class="amount"></p>
+       
+        
+       <script> 
+        String(25);
+        console.log('25'- 5);  // 20   -/* works properly
+        console.log('25'+ 5);  // 255   +  Doesn't work
+
+        // do math function in javascript using numbers not with strings
+        // getting value using dom always be String
+
+        // window.                 //denotes browser
+        // window.document         //denotes webpage
+        // window.console.log();   //denotes console
+        // window.alert();         //denotes browser
+
+
+
+        //whenever we get value from DOM,the value will be string
+        //event => click,keydown
+        //event listener => onclick,onkeydown
+
+        function enterProcess(event){
+            if (event.key==='Enter')
+            {
+                calculateTotal();
+            }
+        }
+        function calculateTotal(){
+            const inputElement=document.querySelector(".data");
+            let cost=Number(inputElement.value); // convert string to number
+            if(cost<40)
+            {
+                cost=cost+10;
+            }
+            document.querySelector(".amount").innerHTML=`$${cost}`;
+        }
+        function subscription(){
+        let buttonElement=document.querySelector('.js-subscribe');
+
+        if(buttonElement.innerText==='subscribe')
+        buttonElement.innerText='subscribed';
+        else
+        buttonElement.innerText='subscribe';
+
+       }    
+       </script>         
+    </body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <div id="samples">
+        Marvels
+        <ul id="sample">
+
+        </ul>
+    </div>
+    <div id="methods">
+
+    </div>
+</body>
+<script>
+    const arr=['peter','tony','hulk','thor','captain'];
+    const details=document.getElementById('sample');
+    for( let i=0;i<arr.length;i++){
+        let list=document.createElement('li');
+        list.textContent=arr[i];
+        details.appendChild(list);
+    }
+
+    // document.getElementById('methods').innerHTML=Math.pow(2,4);
+    // document.getElementById('methods').innerHTML=Math.PI;
+    // document.getElementById('methods').innerHTML=Math.round(34.5);
+    // document.getElementById('methods').innerHTML=Math.floor(34,9);   //floor=ceil
+
+    // let circle=[10,20,30];
+    // // let area=0;
+    // // let areas=[];
+    // // for(let i=0;i<circle.length;i++){
+    // //     area=Math.floor(Math.PI*circle[i]*circle[i]);
+    // //     areas.push(area);
+    // // }
+    // // document.getElementById('methods').innerHTML=areas;
+
+
+    
+    // //map methods
+    // let areasResult=circle.map((r)=>{
+    //     return Math.floor(Math.PI*r**2);
+    // })
+    // document.getElementById('methods').innerHTML=areasResult;
+
+
+
+    //filter method
+    let studentsDetails=[
+        {name:'Santhosh',uid:24,percentage:9.0},
+        {name:'Anas',uid:24,percentage:8.0},
+        {name:'Aravind',uid:24,percentage:8.6},
+        {name:'Velavan',uid:24,percentage:9.2},
+    ];
+
+    // let highestmarks=[];
+    // for(i=0;i<studentsDetails.length;i++){
+    //     if(studentsDetails[i].percentage>=9.0){
+    //         highestmarks.push(studentsDetails[i].name);
+    //     }
+    // }
+    // document.getElementById('methods').innerHTML=highestmarks;
+
+    let highestmarks=studentsDetails.filter((student)=>{
+        return student.percentage>=9.0;
+    })
+    //console.log(highestmarks);
+    document.getElementById('methods').innerHTML=highestmarks[0].name;
+
+</script>
+</html>

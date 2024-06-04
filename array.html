@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript arrays</title>
+</head>
+<body>
+    hello
+</body>
+<script>
+    const arr=[1,2,3,4,5,'tony']; //mixed variables 
+    console.log(arr);
+   
+    //push and pop used to insert and del element at end
+    arr.push(7);
+    console.log(arr);  
+    arr.pop();
+    console.log(arr);
+    
+    //unshift and shift used to insert and del element at beginning
+    arr.unshift('arun');    //insert
+    console.log(arr);     
+    arr.shift();            //delete
+    console.log(arr);
+
+    //splice and slice
+    arr.splice(2,1);     //2=indexValue 1=no of elements
+    console.log(arr);
+    arr.splice(2);       //from 2nd index
+    console.log(arr);
+    arr.splice(1,0,'ram','rana');
+    console.log(arr);
+
+    const newarr=arr.toSpliced(2,0,'ravi');
+    console.log(arr);
+    console.log(newarr);
+    
+
+    //delete  vs splice
+    newarr.splice(2,1);
+    console.log(newarr);
+    delete newarr[2];
+    console.log(newarr);
+
+    //concat
+    const months1=['jan','feb','march','april'];
+    const months2=['may','june','july'];
+    const months3=['aug','sept','oct','nov','dec'];
+    const newmonths=months1.concat(months2,months3);
+    console.log(newmonths);
+
+</script>
+</html>

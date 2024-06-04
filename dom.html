@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <div id="demo"></div>
+</body>
+<script>
+    //elementbyid innerhtml appendchild
+    const ab=document.getElementById('demo');
+    console.log(ab);
+
+    const cd=ab.innerHtml=('hello');
+    console.log(cd);
+
+    const para=document.createElement('p');
+    console.log(para);
+    para.innerHTML=('hello this is tony');
+    console.log(para);
+
+    ab.appendChild(para);
+    
+    //example
+    const list=document.createElement('ul');
+
+    const li=document.createElement('li');
+    li.innerHTML=('hai');
+
+    list.appendChild(li);
+    console.log(list);
+
+
+
+
+</script>
+</html>

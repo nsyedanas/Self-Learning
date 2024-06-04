@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asyncAwait</title>
+</head>
+<body>
+    <script>
+        // let a=10;
+        // function show(){
+        //     let c=11;
+        //     console.log(c);
+        // }
+        // let b=12;
+        // console.log(a);
+        // show();
+        // console.log(b);
+        
+        // let a=10;
+        // async function show(){
+        //     let c=await 11;
+        //     console.log(c);
+        // }
+        // let b=12;
+        // console.log(a);
+        // show();
+        // console.log(b);
+
+        async function show(){
+            let a=await addition(5);
+            let b=await subtraction(a);
+            let c=await multiplication(b);
+            let d=await division(c);
+            console.log(d);
+        } 
+
+        show();
+
+        function addition(val){
+        return (val+5);
+        }
+
+        function subtraction(val){
+            return (val-3);
+        }
+
+        function multiplication(val){
+            return (val*5);
+        }
+
+        function division(val){
+            return (val/7);
+        }
+        
+    </script>
+</body>
+</html>

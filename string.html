@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in Js</title>
+</head>
+<body>
+    <script>
+        let fname=' Ajay  ';
+        let lname='Varma';
+        let a=10,b=20;
+        console.log(fname+a+b);
+
+        console.log(fname.length);
+        let fname1=fname.trimStart();
+        console.log(fname1.length);
+        let fname2=fname.trimEnd();    
+        console.log(fname2.length);
+
+        let fname3=fname.trim();    
+        console.log(fname3.length);
+
+        console.log(lname[2]);
+
+        //slice
+        let  months="janauary,february,march,april,may,june,may";
+        console.log(months.slice(4,12)); //from 4 to 12
+        console.log(months.slice(4));  //from 4
+        console.log(months.slice(-10,-2));
+
+        console.log(months.substring(4,12)); //similar to slice 
+        console.log(months.substring(-15)); //consider negative values as zero
+        console.log(months.substr(4,12));  //from 4 to the next 12 elements
+
+        console.log(months.indexOf('may')); 
+        console.log(months.lastIndexOf('may'));
+       
+        // let n='peter';
+        // let m='peter';
+        // let p=new String('peter');
+        // let q=new String('peter');
+        // if(n==p){
+        //     console.log('true');
+        // }
+        // else
+        //    console.log('false');
+
+        let n='3';
+        let m=3;
+        let p=new String('peter');   //type=object
+        let q=new String('peter');
+        if(p==q){                   //if n==m its true, it checks only the element not the type
+            console.log('true');
+        }
+        else
+           console.log('false'); 
+        console.log(typeof(q));  
+    </script>
+</body>
+</html>

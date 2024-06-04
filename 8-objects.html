@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>objects</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            const product={
+                name:'socks',
+                price: 100
+            };
+    
+            console.log(product);
+    
+            console.log(product.name);
+    
+            product.name='cotton socks';
+    
+            console.log(product);
+            
+            product.newProperty='soon';
+            console.log(product);
+    
+            delete product.newProperty;
+            console.log(product);
+    
+            const product2={
+                name:'shirt',
+                size:'M',
+                'delivery-time':'1 day',
+                rating:{
+                    star:4,
+                    count:87
+                },
+                fun: function fn(){
+                    console.log('your order has been taken');
+                }
+            };
+    
+            console.log(product2['delivery-time']);
+    
+            product2.fun();
+    
+            //json javascript object notation...................
+    
+            console.log(JSON.stringify(product2));   //js to json
+    
+            console.log(JSON.parse(JSON.stringify(product2)));   //json to js
+    
+            //localStorage.............................
+    
+            localStorage.setItem('product2',JSON.stringify(product2));
+            JSON.parse(localStorage.getItem('product2'));
+            localStorage.removeItem('product2');
+    
+           // only copy the reference not the property
+            const product3=product2;
+            console.log(product3); 
+    
+            console.log(product3===product2);
+    
+           
+            const product4={
+                name:'shirt',
+                size:'M',
+                'delivery-time':'1 day',
+                rating:{
+                    star:4,
+                    count:87
+                },
+                fun: function fn(){
+                    console.log('your order has been taken');
+                }
+            };       
+    
+    
+            console.log(product2===product4);
+    
+    
+            //destructuring............................
+    
+            const product5={
+                message:'hello'
+            };
+    
+            //const message=product5.message;
+            //console.log(message);
+    
+            const {message}=product5;
+            console.log(message);
+    
+            //shorthand property.......................
+    
+            const product6={
+                //message:message
+                message
+            };
+            console.log(product6.message);
+    
+            
+            //shorthand method........................
+    
+            /*const product7={
+                method:function func(){
+                    console.log('methods')
+                }
+            };
+            product7.method();
+            */
+    
+            const product7={
+                method(){
+                    console.log('methods')
+                }
+            };
+            product7.method();
+    
+            
+    
+        </script>
+    </body>
+</html>

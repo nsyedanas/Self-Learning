@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    Callback in Javascript
+    <p id="data"></p>
+    <script>
+       //document.getElementById('data').innerHTML=Date();
+   
+    //    setTimeout(() => {
+    //     alert('Oops..Time up');
+    //    },5000);
+       
+    //    setInterval(() => {
+    //      console.log('hello')
+    //    }, 2000);
+
+       setInterval(() => {
+        document.getElementById('data').innerHTML=Date();
+       }, 1000);
+
+       
+    //    function friend1(){
+    //     setTimeout(() => {
+    //         console.log('Talking to friend 1 call back after 3 sec');
+    //         friend2();
+    //     },3000);
+        
+    //    }
+       
+    //    function friend2(){
+    //     console.log('See i have called you after 3 sec');
+    //    }
+       
+    //    friend1();
+
+    
+    //Arithmetic operation
+    addition(5,function (addres){
+        subtraction(addres,function (subres){
+            multiplication(subres,function (mulres){
+                division(mulres,function (divres){
+                    console.log('The result is '+divres);
+                })
+            })
+        })
+    })
+    function addition(val,callback){
+        return callback(val+5)
+    }
+
+    function subtraction(val,callback){
+        return callback(val-3)
+    }
+
+    function multiplication(val,callback){
+        return callback(val*5)
+    }
+
+    function division(val,callback){
+        return callback(val/7)
+    }
+    </script>
+</body>
+</html>

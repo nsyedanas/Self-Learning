@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>booleans</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            true
+            false
+            console.log(10<5);
+            if(24>18){
+                console.log('you can drive...');
+            }
+            else{
+                console.log('you can\'t drive');
+            }
+    
+            const a=5;  //if a=0,if doesn't exists,bcz 0 is falsey
+            if(a){
+                console.log('yes');
+            }
+    
+            console.log(!0); //not fasley
+            
+            let variable; 
+            console.log(variable);  //undefined
+    
+            console.log('text'/5);   //Nan - Not a number
+    
+            
+            const result=true ? 'truthy' : 'falsey'; //ternary operator ?: 
+            console.log(result);  //shortcut for if else ,  condition? if : else;
+    
+    
+            const res=false && 'hello'; //guard operator &&
+            console.log(res);           //no need to check next conditon in and operator if anypne  is false 
+    
+    
+            const re='euro' || 'usd';  //default operator ||
+            console.log(re);           //choose the first value if it not then go to next value
+    
+            const r=undefined || 'usd';
+            console.log(r);
+    
+    
+         </script>
+
+    </body>
+   
+</html>
